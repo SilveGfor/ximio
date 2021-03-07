@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/FrgmMenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fon"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/txtNick"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="SilveGf0or"
+        android:padding="5dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="25sp"
+        android:background="@drawable/main_button"
+        android:gravity="center" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="40dp"
+
+        android:layout_alignParentRight="true"
+        app:cardBackgroundColor="#66B9F9"
+        android:layout_marginRight="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txtMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="999"
+                android:padding="5dp"
+                android:drawableLeft="@drawable/ic_money"
+                android:textColor="@color/colorWhite"
+                android:textSize="25sp"
+                android:gravity="center" />
+            <TextView
+                android:id="@+id/txtExp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="999"
+                android:padding="5dp"
+                android:drawableLeft="@drawable/ic_exp"
+                android:textColor="@color/colorWhite"
+                android:textSize="25sp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/txtRang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_rang"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="3"
+                android:textColor="@color/colorWhite"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/btnGameAlone"
+        android:layout_width="wrap_content"
+        android:background="@drawable/main_button"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="230dp"
+        android:padding="7dp"
+        android:text="Одиночная игра"
+        android:textColor="@color/colorWhite"
+        android:textSize="15dp" />
+
+    <Button
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/btnGameAlone"
+        android:id="@+id/btnGameMulti"
+        android:layout_width="wrap_content"
+        android:background="@drawable/main_button"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="7dp"
+        android:text="Мультиплеер"
+        android:textColor="@color/colorWhite"
+        android:textSize="15dp" />
+    <Button
+        android:id="@+id/btnSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btnLearn"
+        android:layout_marginTop="15dp"
+        android:text="Настройки"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/main_button" />
+
+    <Button
+        android:id="@+id/btnLearn"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnRules"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/main_button"
+        android:text="Обучение"
+        android:textColor="@color/colorWhite" />
+
+    <Button
+        android:id="@+id/btnRules"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnGameMulti"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/main_button"
+        android:text="Правила"
+        android:textColor="@color/colorWhite" />
+
+    <ImageButton
+        android:id="@+id/btnShop"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/btnSettings"
+        android:background="@drawable/shop"/>
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/main_button"
+        android:text="Выход"
+        android:textColor="@color/colorWhite" />
+
+
+</RelativeLayout>
