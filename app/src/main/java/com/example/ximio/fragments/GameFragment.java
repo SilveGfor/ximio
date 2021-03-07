@@ -83,7 +83,7 @@ public class GameFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-
+        //Настройка кнопок
 
         View view =  inflater.inflate(R.layout.fragment_game, container, false);
 
@@ -114,6 +114,7 @@ public class GameFragment extends Fragment {
         TV2_4 = view.findViewById(R.id.el2_4);
         TV2_5 = view.findViewById(R.id.el2_5);
 
+        //подключение к сокетам
         socket.connect();
         SocketTask socketTask = new SocketTask();
         socketTask.execute();
@@ -142,6 +143,7 @@ public class GameFragment extends Fragment {
         TV2_5.setText("-");
         btnContinue.setVisibility(View.GONE);
 
+        //обработки нажатия кнопок
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -423,6 +425,7 @@ public class GameFragment extends Fragment {
             }
         });
 
+        //кнопка начала реакции
         FABinfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -456,6 +459,7 @@ public class GameFragment extends Fragment {
         return view;
     }
 
+    //Асинхронный слушатель событий сокетов
     class SocketTask extends AsyncTask<Void, Void, Void> {
 
         @Override
@@ -482,6 +486,7 @@ public class GameFragment extends Fragment {
         }
     }
 
+    //ДАЛЬШЕ разные события сокетов
     private final Emitter.Listener onConnect = new Emitter.Listener() {
         @Override
         public void call(final Object... args) {
@@ -534,6 +539,7 @@ public class GameFragment extends Fragment {
         }
     };
 
+    //Таймер
     private final Emitter.Listener onTimer = new Emitter.Listener() {
         @Override
         public void call(final Object... args) {
@@ -557,6 +563,7 @@ public class GameFragment extends Fragment {
         }
     };
 
+    //ответ
     private final Emitter.Listener onPlayAloneAnswer = new Emitter.Listener() {
         @Override
         public void call(final Object... args) {
@@ -661,6 +668,7 @@ public class GameFragment extends Fragment {
         }
     };
 
+    //очистка объектов
     public void ClearView() {
         water.setBackgroundResource(R.drawable.water);
         gorelka.setBackgroundResource(R.drawable.gorelka);
